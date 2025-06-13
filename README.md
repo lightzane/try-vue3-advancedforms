@@ -41,3 +41,8 @@ Scaffolding project in /Users/lightzane/Documents/dev/try-vue3-advancedforms...
 
    git init && git add -A && git commit -m "initial commit"
 ```
+
+## Using JSON Server
+
+- https://my-json-server.typicode.com/lightzane/try-vue3-advancedforms
+- https://my-json-server.typicode.com/Code-Pop/Vue-3-Forms

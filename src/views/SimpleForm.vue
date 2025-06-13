@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Create an event</h1>
-    <form>
+    <form @submit.prevent="sendForm">
 
       <BaseSelect 
         :options="categories"
@@ -61,6 +61,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 import BaseCheckbox from '@/components/BaseCheckbox.vue';
 import BaseInput from '@/components/BaseInput.vue';
 import BaseRadioGroup from '@/components/BaseRadioGroup.vue';
@@ -93,6 +95,20 @@ export default {
         { label: 'Yes', value: 1 },
         { label: 'No', value: 0 },
       ]
+    }
+  },
+  methods: {
+    sendForm() {
+      axios.post(
+        'https://my-json-server.typicode.com/lightzane/try-vue3-advancedforms/events',
+        this.event
+      )
+      .then((res) => {
+        console.log('Response', res)
+      })
+      .catch(err => {
+        console.log('Error', err)
+      })
     }
   },
   components: {
