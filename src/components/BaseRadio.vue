@@ -11,7 +11,7 @@
 <script setup lang="ts">
 type Props = {
     label?: string
-    value: string
+    value: string | number
 }
 
 const { label = '' } = defineProps<Props>()
